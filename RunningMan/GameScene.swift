@@ -9,33 +9,40 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    var movingGround: SUMovingGround!
+    var isStarted = false
+
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        self.addChild(myLabel)
+        backgroundColor = UIColor(red: 159.0/255.0, green: 201.0/255.0, blue: 244.0/255.0, alpha: 1.0)
+        
+        movingGround = SUMovingGround(size: CGSizeMake(view.frame.width, 20))
+        movingGround.position = CGPointMake(0, view.frame.height/2)
+        addChild(movingGround)
+        
+        let tapToStartLabel = SKLabelNode(text: "Tap to Start!")
+        tapToStartLabel.name = "tapToStartLabel"
+        tapToStartLabel.position.x = view.center.x
+        tapToStartLabel.position.y = view.center.y + 50
+        tapToStartLabel.fontColor = UIColor.blackColor()
+        addChild(tapToStartLabel)
+        
+        
     }
-    
+    func start(){
+        isStarted = true
+        movingGround.startMoving()
+        let tapToStartLabel = childNodeWithName("tapToStartLabel")//look this up!!
+        tapToStartLabel!.removeFromParent()
+        
+    }
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         /* Called when a touch begins */
-        
-        for touch in (touches as! Set<UITouch>) {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
+        if !isStarted{
+            start()
         }
+        
     }
    
     override func update(currentTime: CFTimeInterval) {

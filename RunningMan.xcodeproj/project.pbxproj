@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075588CA1B2F62A8000D6FB5 /* SUMovingGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075588C91B2F62A8000D6FB5 /* SUMovingGround.swift */; };
 		07F76F771B2F4527001B301C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F76F761B2F4527001B301C /* AppDelegate.swift */; };
-		07F76F791B2F4527001B301C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 07F76F781B2F4527001B301C /* GameScene.sks */; };
 		07F76F7B1B2F4527001B301C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F76F7A1B2F4527001B301C /* GameScene.swift */; };
 		07F76F7D1B2F4527001B301C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F76F7C1B2F4527001B301C /* GameViewController.swift */; };
 		07F76F801B2F4527001B301C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F76F7E1B2F4527001B301C /* Main.storyboard */; };
@@ -28,10 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		075588C91B2F62A8000D6FB5 /* SUMovingGround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUMovingGround.swift; sourceTree = "<group>"; };
 		07F76F711B2F4527001B301C /* RunningMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunningMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F76F751B2F4527001B301C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07F76F761B2F4527001B301C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07F76F781B2F4527001B301C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		07F76F7A1B2F4527001B301C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		07F76F7C1B2F4527001B301C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		07F76F7F1B2F4527001B301C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,8 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				07F76F761B2F4527001B301C /* AppDelegate.swift */,
-				07F76F781B2F4527001B301C /* GameScene.sks */,
 				07F76F7A1B2F4527001B301C /* GameScene.swift */,
+				075588C91B2F62A8000D6FB5 /* SUMovingGround.swift */,
 				07F76F7C1B2F4527001B301C /* GameViewController.swift */,
 				07F76F7E1B2F4527001B301C /* Main.storyboard */,
 				07F76F811B2F4527001B301C /* Images.xcassets */,
@@ -200,7 +200,6 @@
 			files = (
 				07F76F851B2F4527001B301C /* LaunchScreen.xib in Resources */,
 				07F76F821B2F4527001B301C /* Images.xcassets in Resources */,
-				07F76F791B2F4527001B301C /* GameScene.sks in Resources */,
 				07F76F801B2F4527001B301C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +220,7 @@
 			files = (
 				07F76F7B1B2F4527001B301C /* GameScene.swift in Sources */,
 				07F76F7D1B2F4527001B301C /* GameViewController.swift in Sources */,
+				075588CA1B2F62A8000D6FB5 /* SUMovingGround.swift in Sources */,
 				07F76F771B2F4527001B301C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +417,7 @@
 				07F76F961B2F4528001B301C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07F76F971B2F4528001B301C /* Build configuration list for PBXNativeTarget "RunningManTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +426,7 @@
 				07F76F991B2F4528001B301C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
