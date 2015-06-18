@@ -16,7 +16,7 @@ class SUMovingGround: SKSpriteNode {
     let COLOR_TWO = UIColor.blackColor()
     
     init(size: CGSize) {
-        super.init(texture: nil, color: COLOR_TWO, size: CGSizeMake(size.width*2, size.height))
+        super.init(texture: nil, color: UIColor(red: 159.0/255.0, green: 201.0/255.0, blue: 244.0/255.0, alpha: 1.0), size: CGSizeMake(size.width*2, size.height))
         anchorPoint = CGPointMake(0, 0.5)
         
         for var i = 0; i < SEG_NUM; i++ {
@@ -35,14 +35,16 @@ class SUMovingGround: SKSpriteNode {
     }
     
     func startMoving(){
-        let moveLeft = SKAction.moveByX(-frame.size.width/2, y: 0, duration: 1.5)
+        let moveLeft = SKAction.moveByX(-frame.size.width/2, y: 0, duration: 2.5)
         let resetPosition = SKAction.moveToX(0, duration: 0)
-        
         let moveSequence = SKAction.sequence([moveLeft, resetPosition])
+        
         runAction(SKAction.repeatActionForever(moveSequence))
 
     }
-
+    func stop() {
+        removeAllActions()
+    }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

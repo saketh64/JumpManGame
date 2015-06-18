@@ -25,6 +25,8 @@ class GameViewController: UIViewController {
         //Present the scene
         skView.presentScene(scene)
         
+       
+        
     }
 
 
@@ -38,6 +40,7 @@ class GameViewController: UIViewController {
         } else {
             return Int(UIInterfaceOrientationMask.All.rawValue)
         }
+        
         
     }
 
